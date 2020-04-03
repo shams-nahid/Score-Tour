@@ -2,14 +2,15 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import StTopBar from '../../basic/st-top-bar';
-import StList from '../../basic/st-list';
-import StBottomNavigation from '../../basic/st-bottom-navigation';
 import StScore from '../../basic/st-score';
+import StCustomList from '../../basic/st-custom-list';
+import StBottomBar from '../../basic/st-bottom-bar';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    maxHeight: '100vh',
-    textAlign: 'center'
+    // maxHeight: '100vh'
+    // textAlign: 'center',
+    // maxWidth: '500px'
   }
 }));
 
@@ -21,8 +22,9 @@ export default function StLayout() {
       <CssBaseline />
       <StTopBar />
       <StScore />
-      <StList />
-      <StBottomNavigation />
+      <StCustomList />
+      {/* <StBottomNavigation /> */}
+      <StBottomBar />
     </div>
   );
 }

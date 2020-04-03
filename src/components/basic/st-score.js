@@ -8,7 +8,6 @@ const useStyles = makeStyles({
     textAlign: 'center',
     fontSize: '18px',
     fontWeight: 'bold',
-    paddingRight: '103px',
     paddingBottom: '3px',
     width: '100%',
     backgroundColor: 'white',

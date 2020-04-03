@@ -96,7 +96,7 @@ const StTopBar = props => {
           <Typography className={classes.title} noWrap>
             Tour Score
           </Typography>
-          <div className={classes.search}>
+          {/* <div className={classes.search}>
             <div className={classes.searchIcon}>
               <SearchIcon />
             </div>
@@ -108,10 +108,9 @@ const StTopBar = props => {
               }}
               inputProps={{ 'aria-label': 'search' }}
             />
-          </div>
+          </div> */}
         </Toolbar>
       </AppBar>
-      <div>Your Score</div>
     </div>
   );
 };
