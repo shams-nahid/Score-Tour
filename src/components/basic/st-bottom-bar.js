@@ -29,10 +29,41 @@ const useStyles = makeStyles({
   }
 });
 
-const StBottomBar = props => {
+const StBottomBar = ({ onChangeDialogContent }) => {
   const classes = useStyles();
   const [value, setValue] = React.useState(null);
+
+  const generateDialogContent = value => {
+    let title;
+    let content;
+    switch (value) {
+      case 0:
+        title = 'Share';
+        content = 'Feature is under development.';
+        break;
+      case 1:
+        title = 'Save';
+        content = 'Feature is under development.';
+        break;
+      case 2:
+        title = 'About';
+        content = 'Feature is under development.';
+        break;
+      default:
+        title = 'Not Available';
+        content = 'Feature is under development.';
+        break;
+    }
+    return {
+      isOpen: true,
+      value,
+      title,
+      content
+    };
+  };
+
   const handleChange = (event, newValue) => {
+    onChangeDialogContent(generateDialogContent(newValue));
     setValue(newValue);
   };
   return (

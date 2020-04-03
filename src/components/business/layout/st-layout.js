@@ -1,30 +1,37 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import React, { useState } from 'react';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import StTopBar from '../../basic/st-top-bar';
 import StScore from '../../basic/st-score';
 import StCustomList from '../../basic/st-custom-list';
 import StBottomBar from '../../basic/st-bottom-bar';
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    // maxHeight: '100vh'
-    // textAlign: 'center',
-    // maxWidth: '500px'
-  }
-}));
+import StDialog from '../../basic/st-dialog';
 
 export default function StLayout() {
-  const classes = useStyles();
+  const [travellerScore, setTravellerScore] = useState(0);
+  const [dialogContent, setDialogContent] = useState({
+    isOpen: null,
+    value: null,
+    title: null,
+    content: null
+  });
+
+  const onChangeTravellerScore = score => {
+    setTravellerScore(score);
+  };
+
+  const onChangeDialogContent = dialogContent =>
+    setDialogContent(dialogContent);
+
+  const onCloseDialog = () => {};
 
   return (
-    <div className={classes.root}>
+    <>
       <CssBaseline />
       <StTopBar />
-      <StScore />
-      <StCustomList />
-      {/* <StBottomNavigation /> */}
-      <StBottomBar />
-    </div>
+      <StScore travellerScore={travellerScore} />
+      <StCustomList onChangeTravellerScore={onChangeTravellerScore} />
+      <StDialog dialogContent={dialogContent} onCloseDialog={onCloseDialog} />
+      <StBottomBar onChangeDialogContent={onChangeDialogContent} />
+    </>
   );
 }

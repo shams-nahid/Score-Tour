@@ -19,11 +19,11 @@ const useStyles = makeStyles({
   }
 });
 
-const StScore = props => {
+const StScore = ({ travellerScore = 0 }) => {
   const classes = useStyles();
   return (
     <div className={classes.root}>
-      <div className={classes.title}>Your score: 000</div>
+      <div className={classes.title}>Your score: {travellerScore}</div>
     </div>
   );
 };
