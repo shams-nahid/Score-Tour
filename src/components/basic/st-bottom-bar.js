@@ -14,26 +14,29 @@ const useStyles = makeStyles({
     '& .MuiTab-root': {
       fontSize: '10px',
       lineHeight: '5px',
-      marginBottom: '-15px'
+      marginBottom: '-15px',
     },
     '& .MuiSvgIcon-root': {
       width: '15px',
-      height: '15px'
+      height: '15px',
     },
     '& .MuiTab-labelIcon': {
-      minHeight: '48px'
-    }
+      minHeight: '48px',
+    },
+    '& .MuiPaper-root': {
+      backgroundColor: '#f3f5ff',
+    },
   },
   root: {
-    flexGrow: 1
-  }
+    flexGrow: 1,
+  },
 });
 
 const StBottomBar = ({ onChangeDialogContent }) => {
   const classes = useStyles();
   const [value, setValue] = React.useState(null);
 
-  const generateDialogContent = value => {
+  const generateDialogContent = (value) => {
     let title;
     let content;
     switch (value) {
@@ -58,7 +61,7 @@ const StBottomBar = ({ onChangeDialogContent }) => {
       isOpen: true,
       value,
       title,
-      content
+      content,
     };
   };
 

@@ -1,20 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import { makeStyles } from '@material-ui/core';
 
-import { places } from '../../constants/places';
-import StCustomListItem from './st-custom-list-item';
+// import { places } from '../../constants/places';
+import { districts } from '../../constants/districts';
+import StCustomExpansionPanelList from './st-custom-expansion-panel-list';
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   container: {
     padding: '60px 10px 0px 10px',
-    textAlign: '-webkit-center'
+    textAlign: '-webkit-center',
   },
   itemStyle: {
-    paddingBottom: '3px'
-  }
+    paddingBottom: '3px',
+  },
 }));
 
-const StCustomList = ({ onChangeTravellerScore }) => {
+const StCustomList = ({ onChangeTravellerScore, isCollapseAll }) => {
   const classes = useStyles();
   const [totalScore, setTotalScore] = useState(0);
 
@@ -29,10 +30,11 @@ const StCustomList = ({ onChangeTravellerScore }) => {
 
   return (
     <div className={classes.container}>
-      {places.map(place => (
+      {districts.map((district) => (
         <div className={classes.itemStyle}>
-          <StCustomListItem
-            place={place}
+          <StCustomExpansionPanelList
+            district={district}
+            isCollapseAll={isCollapseAll}
             onChangePlaceCheckbox={onChangePlaceCheckbox}
           />
         </div>

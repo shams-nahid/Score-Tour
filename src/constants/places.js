@@ -86,5 +86,5 @@ export const places = [
   { name: 'কালাপাহাড়', id: 86, score: '2' },
   { name: 'মাতায়ন্তং', id: 87, score: '2' },
   { name: 'দেবতাপুকুর', id: 88, score: '2' },
-  { name: 'হাজাছরা ঝরনা', id: 89, score: '2' }
+  { name: 'হাজাছরা ঝরনা', id: 89, score: '2' },
 ];

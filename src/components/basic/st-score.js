@@ -10,13 +10,13 @@ const useStyles = makeStyles({
     fontWeight: 'bold',
     paddingBottom: '3px',
     width: '100%',
-    backgroundColor: 'white',
-    zIndex: 99999
+    backgroundColor: '#c5cae9',
+    zIndex: 99999,
   },
   title: {
     paddingTop: '9px',
-    paddingBottom: '7px'
-  }
+    paddingBottom: '7px',
+  },
 });
 
 const StScore = ({ travellerScore = 0 }) => {
