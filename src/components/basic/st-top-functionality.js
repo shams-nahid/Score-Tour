@@ -1,5 +1,5 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core';
+import { makeStyles, Paper } from '@material-ui/core';
 
 import StCheckbox from './st-checkbox';
 
@@ -13,21 +13,23 @@ const useStyles = makeStyles({
     paddingBottom: '3px',
     width: '100%',
     zIndex: 99999,
-    backgroundColor: 'rgb(250, 250, 250)',
+    backgroundColor: 'rgb(250, 250, 250)'
   },
   contentStyle: {
-    display: 'inline-flex',
-  },
+    width: '100%',
+    maxWidth: '488px',
+    display: 'inline-flex'
+  }
 });
 
 const StTopFunctionality = ({ onChangeIsCollapseAll, isCollapseAll }) => {
   const classes = useStyles();
-  const onChangeCheckBox = (isCollapseAll) => {
+  const onChangeCheckBox = isCollapseAll => {
     onChangeIsCollapseAll(isCollapseAll);
   };
   return (
     <div className={classes.root}>
-      <div className={classes.contentStyle}>
+      <Paper className={classes.contentStyle}>
         <div>
           <StCheckbox
             label={'Collapse All'}
@@ -35,7 +37,7 @@ const StTopFunctionality = ({ onChangeIsCollapseAll, isCollapseAll }) => {
             onChangeCheckBox={onChangeCheckBox}
           />
         </div>
-      </div>
+      </Paper>
     </div>
   );
 };

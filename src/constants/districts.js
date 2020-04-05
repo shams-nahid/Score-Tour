@@ -2,6 +2,11 @@ export const districts = [
   {
     name: 'Dhaka',
     id: '1',
+    places: []
+  },
+  {
+    name: 'Dhaka',
+    id: '1',
     places: [
       { name: 'সাজেক', id: 0, score: '3' },
       { name: 'ময়ুঙকপাল', id: 1, score: '2' },
@@ -18,8 +23,8 @@ export const districts = [
       { name: 'মাধবকুন্ডু', id: 12, score: '2' },
       { name: 'মাধবপুর লেক', id: 13, score: '2' },
       { name: 'লাওয়াছড়া', id: 14, score: '1' },
-      { name: 'হামহাম ঝর্ণা', id: 15, score: '3' },
-    ],
+      { name: 'হামহাম ঝর্ণা', id: 15, score: '3' }
+    ]
   },
   {
     name: 'Rajshahi',
@@ -41,8 +46,8 @@ export const districts = [
       { name: 'ভাসমান পেয়ারাবাজার', id: 31, score: '2' },
       { name: 'বিরিসিরি', id: 32, score: '2' },
       { name: 'বারিক্কাটিলা', id: 33, score: '1' },
-      { name: 'টাংগুয়ার হাওর', id: 34, score: '3' },
-    ],
+      { name: 'টাংগুয়ার হাওর', id: 34, score: '3' }
+    ]
   },
   {
     name: 'Sirajgong',
@@ -67,8 +72,8 @@ export const districts = [
       { name: 'নীলগিরি', id: 51, score: '1' },
       { name: 'নীলাচল', id: 52, score: '1' },
       { name: 'স্বর্ম্মন্দির', id: 53, score: '1' },
-      { name: 'মেঘলা', id: 54, score: '1' },
-    ],
+      { name: 'মেঘলা', id: 54, score: '1' }
+    ]
   },
   {
     name: 'Tangail',
@@ -90,13 +95,13 @@ export const districts = [
       { name: 'গুলিয়াখালি', id: 68, score: '1' },
       { name: 'ক্রিসতং', id: 69, score: '5' },
       { name: 'সাকাহাফং', id: 70, score: '1' },
-      { name: 'জোতলং', id: 71, score: '8' },
-    ],
+      { name: 'জোতলং', id: 71, score: '8' }
+    ]
   },
   {
     name: 'Gazipur',
     id: '5',
-    places: [],
+    places: []
   },
   {
     name: 'Narayangonj',
@@ -116,7 +121,7 @@ export const districts = [
       { name: 'রিজার্ভ ফলস', id: 83, score: '3' },
       { name: 'নিকলী হাওর', id: 84, score: '1' },
       { name: 'ঢিবির হাওর', id: 85, score: '2' },
-      { name: 'কালাপাহাড়', id: 86, score: '2' },
-    ],
-  },
+      { name: 'কালাপাহাড়', id: 86, score: '2' }
+    ]
+  }
 ];

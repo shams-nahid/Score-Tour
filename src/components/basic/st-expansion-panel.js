@@ -6,21 +6,21 @@ import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     width: '100%',
     '& .MuiExpansionPanelDetails-root': {
       display: 'block',
-      padding: '8px 10px',
+      padding: '8px 10px'
     },
     '& .MuiExpansionPanelSummary-root': {
-      padding: '0px 10px',
-    },
+      padding: '0px 10px'
+    }
   },
   heading: {
     fontSize: '0.95rem',
-    fontWeight: '600',
-  },
+    fontWeight: '600'
+  }
 }));
 
 const StExpansionPanel = ({ children, districtName, expanded = true }) => {
@@ -30,9 +30,13 @@ const StExpansionPanel = ({ children, districtName, expanded = true }) => {
     setIsExpanded(!expanded);
   }, [expanded]);
 
+  const onChangeExpansionPanel = event => {
+    setIsExpanded(!isExpanded);
+  };
+
   return (
     <div className={classes.root}>
-      <ExpansionPanel expanded={isExpanded}>
+      <ExpansionPanel expanded={isExpanded} onChange={onChangeExpansionPanel}>
         <ExpansionPanelSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls='panel1a-content'
