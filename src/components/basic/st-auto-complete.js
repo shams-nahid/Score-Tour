@@ -6,8 +6,8 @@ import { makeStyles } from '@material-ui/core';
 const useStyles = makeStyles({
   root: {
     '& .MuiAutocomplete-root': {
-      width: '250px',
-      margin: '-15px 10px 0px 0px'
+      width: '130px',
+      margin: '-15px 17px 0px 0px'
     },
     '& .MuiFormLabel-root': {
       fontSize: '15px',

@@ -38,7 +38,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "optimized-build": "brunch build -p"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -62,12 +63,6 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.18.3",
     "husky": "^4.2.3",
-    "redux-devtools-extension": "^2.13.8",
-    "terser-brunch": "^4.0.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint:precommit"
-    }
+    "redux-devtools-extension": "^2.13.8"
   }
 }
