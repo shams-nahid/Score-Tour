@@ -7,6 +7,7 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Slide from '@material-ui/core/Slide';
 import { makeStyles } from '@material-ui/core';
+import { useSelector } from 'react-redux';
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction='up' ref={ref} {...props} />;
@@ -26,11 +27,12 @@ const useStyles = makeStyles({
   }
 });
 
-const StDialog = ({ dialogContent, onCloseDialog }) => {
+const StDialog = ({ onCloseDialog }) => {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
+  const dialogContent = useSelector(state => state.dialogContent.dialogContent);
 
   useEffect(() => {
     const { isOpen, title, content } = dialogContent;
@@ -40,7 +42,7 @@ const StDialog = ({ dialogContent, onCloseDialog }) => {
   }, [dialogContent]);
 
   const handleClose = () => {
-    onCloseDialog(false);
+    onCloseDialog && onCloseDialog(false);
     setOpen(false);
   };
 

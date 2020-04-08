@@ -1,40 +1,45 @@
 import React, { useState } from 'react';
 import StCheckbox from '../basic/st-list-item-checkbox';
 import { makeStyles, Paper } from '@material-ui/core';
+import { useDispatch } from 'react-redux';
+import { incrementScore, decrementScore } from '../../actions/score-action';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   itemContainerStyle: {
     maxWidth: '500px',
     display: 'flex',
     justifyContent: 'space-between',
-    padding: '5px',
+    padding: '5px'
   },
   nameStyle: {
     textAlign: 'initial',
-    paddingTop: '3px',
+    paddingTop: '3px'
   },
   scoreStyle: {
-    paddingTop: '3px',
+    paddingTop: '3px'
   },
   checkboxStyle: {
     '& .MuiCheckbox-root': {
-      padding: '1px 9px 0px 5px',
-    },
+      padding: '1px 9px 0px 5px'
+    }
   },
   scoreCheckboxContainerStyle: {
     display: 'flex',
-    justifyContent: 'space-between',
-  },
+    justifyContent: 'space-between'
+  }
 }));
 
-const StPlaceItem = ({ place, onChangePlaceCheckbox }) => {
+const StPlaceItem = ({ place }) => {
   const classes = useStyles();
+  const dispatch = useDispatch();
   const [isChecked, setIsChecked] = useState(false);
 
-  const onClickPaper = (event) => {
+  const onClickPaper = event => {
     const newCheckStatus = !isChecked;
     setIsChecked(newCheckStatus);
-    onChangePlaceCheckbox(newCheckStatus, parseInt(place.score));
+    newCheckStatus
+      ? dispatch(incrementScore(parseInt(place.score)))
+      : dispatch(decrementScore(parseInt(place.score)));
   };
 
   const { name, score } = place;

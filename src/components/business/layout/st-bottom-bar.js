@@ -6,37 +6,41 @@ import Tab from '@material-ui/core/Tab';
 import ShareIcon from '@material-ui/icons/Share';
 import SaveIcon from '@material-ui/icons/Save';
 import InfoIcon from '@material-ui/icons/Info';
+import { useDispatch } from 'react-redux';
+import { setDialogContent } from '../../../actions/dialog-content-action';
 
 const useStyles = makeStyles({
   container: {
-    position: 'sticky',
+    position: 'fixed',
     bottom: 0,
+    width: '100%',
     '& .MuiTab-root': {
       fontSize: '10px',
       lineHeight: '5px',
-      marginBottom: '-15px',
+      marginBottom: '-15px'
     },
     '& .MuiSvgIcon-root': {
       width: '15px',
-      height: '15px',
+      height: '15px'
     },
     '& .MuiTab-labelIcon': {
-      minHeight: '48px',
+      minHeight: '48px'
     },
     '& .MuiPaper-root': {
-      backgroundColor: '#f3f5ff',
-    },
+      backgroundColor: '#f3f5ff'
+    }
   },
   root: {
-    flexGrow: 1,
-  },
+    flexGrow: 1
+  }
 });
 
 const StBottomBar = ({ onChangeDialogContent }) => {
   const classes = useStyles();
+  const dispatch = useDispatch();
   const [value, setValue] = React.useState(null);
 
-  const generateDialogContent = (value) => {
+  const generateDialogContent = value => {
     let title;
     let content;
     switch (value) {
@@ -61,12 +65,12 @@ const StBottomBar = ({ onChangeDialogContent }) => {
       isOpen: true,
       value,
       title,
-      content,
+      content
     };
   };
 
   const handleChange = (event, newValue) => {
-    onChangeDialogContent(generateDialogContent(newValue));
+    dispatch(setDialogContent(generateDialogContent(newValue)));
     setValue(newValue);
   };
   return (

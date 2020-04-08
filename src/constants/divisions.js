@@ -1,34 +1,11 @@
 export const divisions = [
-  {
-    name: 'ঢাকা',
-    id: '1'
-  },
-  {
-    name: 'সিলেট',
-    id: '2'
-  },
-  {
-    name: 'চট্টগ্রাম',
-    id: '3'
-  },
-  {
-    name: 'ময়মনসিংহ',
-    id: '4'
-  },
-  {
-    name: 'রংপুর',
-    id: '5'
-  },
-  {
-    name: 'বরিশাল',
-    id: '6'
-  },
-  {
-    name: 'রাজশাহী',
-    id: '7'
-  },
-  {
-    name: 'খুলনা',
-    id: '8'
-  }
+  { name: 'All', id: 9 },
+  { name: 'Barisal', id: 1 },
+  { name: 'Chittagong', id: 2 },
+  { name: 'Dhaka', id: 3 },
+  { name: 'Khulna', id: 4 },
+  { name: 'Mymensingh', id: 5 },
+  { name: 'Rajshahi', id: 6 },
+  { name: 'Rangpur', id: 7 },
+  { name: 'Sylhet', id: 8 }
 ];

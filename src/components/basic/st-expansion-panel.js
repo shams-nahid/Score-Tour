@@ -26,6 +26,7 @@ const useStyles = makeStyles(theme => ({
 const StExpansionPanel = ({ children, districtName, expanded = true }) => {
   const classes = useStyles();
   const [isExpanded, setIsExpanded] = useState(true);
+
   useEffect(() => {
     setIsExpanded(!expanded);
   }, [expanded]);
