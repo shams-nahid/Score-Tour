@@ -4,7 +4,7 @@ import {
 } from '../action-types/collapse-all-type';
 
 const initialState = {
-  isCollapseAllChecked: true
+  isCollapseAllChecked: false
 };
 
 const collapseAllReducer = (state = initialState, action) => {

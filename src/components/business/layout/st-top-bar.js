@@ -17,8 +17,8 @@ const useStyles = makeStyles(theme => ({
       marginLeft: '-5px'
     },
     '& .MuiToolbar-root': {
-      paddingBottom: '7px',
-      height: '63px'
+      // paddingBottom: '7px'
+      // height: '63px'
     }
   },
   menuButton: {

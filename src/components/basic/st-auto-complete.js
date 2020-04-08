@@ -25,13 +25,15 @@ const StAutoComplete = ({ options, onChangeAutoComplete, label }) => {
   return (
     <div className={classes.root}>
       <Autocomplete
-        disableClearable
+        blurOnSelect='true'
         className={classes.autocompleteStyle}
         options={options}
         getOptionLabel={option => option.name}
         onChange={(event, newValue) => onChangeAutoComplete(newValue.id)}
         renderInput={params => (
           <TextField
+            blurOnSelect='true'
+            disabled
             className={classes.textFieldStyle}
             {...params}
             label={label}

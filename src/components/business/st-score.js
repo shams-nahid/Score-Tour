@@ -5,18 +5,19 @@ import { useSelector } from 'react-redux';
 const useStyles = makeStyles({
   root: {
     position: 'sticky',
-    top: '53px',
+    top: '56px',
     textAlign: 'center',
-    fontSize: '18px',
+    fontSize: '14px',
     fontWeight: 'bold',
     paddingBottom: '3px',
     width: '100%',
     backgroundColor: '#c5cae9',
-    zIndex: 99999
+    zIndex: 1,
+    borderTop: '6px solid white'
   },
   title: {
-    paddingTop: '9px',
-    paddingBottom: '7px'
+    paddingTop: '4px',
+    paddingBottom: '2px'
   }
 });
 
